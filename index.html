@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es" class="h-100">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <title>Expresiones regulares</title>
+    </head>
+
+    <body class="bg-light">
+        <!--Header de la pagina-->
+        <div class="d-flex flex-wrap ms-4 py-5 mb-4">
+            <header class="container-lg bg-light">
+                <div class="row align-items-center">
+
+                    <div class="col-md-6">
+                        <h1>Hola!</h1>
+                        <h2>Bienvenida/o a esta prueba de expresiones regulares :D</h2>
+                    </div>
+
+                    <div class="col-md-6 justify-content-right">
+                        <img src="../img/cuteLin.png" class="img-fluid" style="max-height: 125px;">
+                    </div>
+
+                </div>
+            </header>
+        </div>
+
+        <!--Cuerpo del programa-->
+        
+        <div class="container-lg flex-wrap justify-content-left">
+
+            <div class="row justify-content-left">
+                
+                <!--Primera cajita-->
+                <div class="col-md-6">
+                    <div class="shadow-lg p-4 bg-body rounded">
+                        <h3>¡Probemos!</h3>
+
+                        <!--Fila interna-->
+                        <div class="row align-items-center">
+      
+                            <!-- Columna izquierda-->
+                            <div class="col-7">
+                                <label for="idTxtFrase" class="form-label">
+                                    <h4>Recrea la siguiente frase: "Satoru Gojo es el mas fuerte"</h4>
+                                </label>
+
+                                <input type="text" id="idTxtFrase" placeholder="Escribe aquí..." class="form-control mb-3">
+
+                                <button id="idBtnPrueba" type="button" class="btn btn-prueba w-100">
+                                 Descubre qué pasa 
+                                </button>
+                            </div>
+
+                            <!-- Columna derecha: imagen -->
+                            <div class="col-5 text-center">
+                            <img src="../img/thinkingLin.png" class="img-fluid" style="max-height: 200px;">
+                            </div>
+
+                            <!-- Imagen oculta que aparece solo si la frase es correcta -->
+                            <div class="row d-flex mt-3">
+                                <div class="col-5">
+                                    <img id="imagenFrase" src="../img/BienGojo.png" alt="Sorpresa" 
+                                    class="img-fluid d-none justify-content-left ms-4" style="max-width: 150px;"/>
+                                </div>
+                                
+                                <div class="col-7">
+                                    <label class="form-label d-none justify-content-center ms-4 py-5" id="labelFrase">
+                                    <h4>Gojo lo aprueba!</h4>
+                                    </label>  
+                                </div>                           
+                            </div>
+                        </div>
+                </div>
+                </div>                
+
+                <!--Tercera cajita-->
+                <div class="col-md-6">
+
+                    <div class="shadow-lg p-4 mt-3 bg-body rounded">
+
+                        <label for="idTxtFecha" class="form-label">
+                            <h3>Escribe esta fecha 07/12/1989</h3>
+                        </label>
+
+                        <input type="text" class="form-control" id="idTxtFecha"
+                           placeholder="DD/MM/AAAA" required />
+                        <div id="errorFecha" class="alert alert-warning mt-2 d-none">
+                        ❌ Escriba un correo válido.
+                        </div>
+
+                        <div class="row d-flex justify-content-right mt-3">
+                                <div class="col d-grid">
+                                    <button id="idBtnFecha" type="button" class="btn btn-prueba">
+                                    Prueba
+                                    </button>
+                                 </div>
+                        </div>
+
+                        <!--Imagen sorpresa!-->
+                        <div class="row d-flex mt-3">
+                                <div class="col-5">
+                                    <img id="imagenFecha" src="../img/cumpleGojo.jpg" alt="Feliz cumple Gojo" 
+                                    class="img-fluid d-none justify-content-left ms-4" style="max-width: 150px;"/>
+                                </div>
+                                
+                                <div class="col-7">
+                                    <label class="form-label d-none justify-content-center ms-4 py-5" id="labelFecha">
+                                    <h4>Ahora ya sabes cuando es el cumpleaños de Gojo :D</h4>
+                                    </label>  
+                                </div>                           
+                            </div>
+                    </div>                    
+                </div>
+
+            </div>
+
+            <div class="row justify-content-left">
+
+                <!--Segunda cajita-->
+                <div class="col-md-6">
+                    <div class="shadow-lg p-4 mt-3 bg-body rounded">
+                        
+                        <label for="idTxtCorreo" class="form-label">
+                            <h3>Ingresa tu correo para ver una sorpresa!</h3>
+                        </label>
+
+                        <input type="email" class="form-control" id="idTxtCorreo"
+                           placeholder="nombre@gmail.com" required />
+                        <div id="errorCorreo" class="alert alert-warning mt-2 d-none">
+                        ❌ Escriba un correo válido.
+                        </div>
+
+                        <div class="row d-flex justify-content-right mt-3">
+                                <div class="col d-grid">
+                                    <button id="idBtnCorreo" type="button" class="btn btn-prueba">
+                                    ¡Sorpresa! 
+                                    </button>
+                                </div>
+                        </div>
+                    </div>   
+                </div>
+
+                <div class="col-md-6">
+                    <img src="../img/tiredLin.png" class="img-fluid mx-auto d-block" style="max-width:300px">
+                </div>
+            </div>
+
+            <!-- Sección del carrusel -->
+            <div class="container mt-5 py-5">
+            <h1 class="text-center mb-4">Expresiones Regulares usadas</h1>
+
+            <div id="miCarrusel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+
+    
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- Imágenes -->
+            <div class="carousel-inner rounded shadow-lg">
+                <div class="carousel-item active">
+                <img src="../img/actividad1.png" class="d-block w-100" alt="Foto 1">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/actividad2.png" class="d-block w-100" alt="Foto 2">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/actividad3.png" class="d-block w-100" alt="Foto 3">
+            </div>
+            </div>
+
+            <!-- Botones de control -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            </button>
+            </div>
+        </div>
+
+
+        </div>
+
+
+        <!-- Librería de EmailJS -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <!-- Bootstrap (incluye Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!--JS de la pagina-->
+        <script src="../js/funciones.js"></script>
+
+    </body>
+</html>
