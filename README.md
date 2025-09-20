@@ -1,8 +1,16 @@
-LIC_ExpresionesRegulares        <-- root (raíz)
+mi-pagina/
 │
-├── index.html    <-- tu archivo principal
-├── style.css
-├── script.js
+├── index.html
+├── bootstrap/
+│   ├── css/
+│   │   └── bootstrap.min.css
+│   └── js/
+│       └── bootstrap.bundle.min.js
+├── css/
+│   └── estilo.css
+├── js/
+│   └── script.js
 └── img/
-    ├── foto1.png
-    └── foto2.png
+    ├── actividad1.png
+    ├── actividad2.png
+    └── actividad3.png
